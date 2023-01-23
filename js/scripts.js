@@ -23,20 +23,39 @@ function Place(placeName, location, note) {
   this.note = note;
 }
 
+// function displayResults() {
+//   const placeName = document.getElementById("place-name");
+//   const location = document.getElementById("location");
+//   const note = document.getElementById("note").removeAttribute("hidden");
+
+// }
+
 // UI LOGIC -------
 
 let travelLog = new TravelLog();
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  const inputtedPlaceName = document.querySelector("input#new-place-name").value;
+  const inputtedPlaceName = document.querySelector(
+    "input#new-place-name"
+  ).value;
   const inputtedLocation = document.querySelector("input#new-location").value;
   const inputtedNote = document.querySelector("input#new-note").value;
+  let placeList = document.querySelector("div#places");
   let newPlace = new Place(inputtedPlaceName, inputtedLocation, inputtedNote);
   travelLog.addPlace(newPlace);
-  console.log(travelLog.places);
+  placeList.append(addPlaceToList((innerText = inputtedPlaceName)));
 }
 
 window.addEventListener("load", function () {
-  this.document.querySelector("form#new-place").addEventListener("submit", handleFormSubmission);
+  this.document
+    .querySelector("form#new-place")
+    .addEventListener("submit", handleFormSubmission);
 });
+
+function addPlaceToList(newPlace) {
+  
+    // if (newPlace !== null) {
+    (document.querySelector("div#places").innerText = newPlace);
+}
+// }

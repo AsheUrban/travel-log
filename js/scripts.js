@@ -41,10 +41,12 @@ function handleFormSubmission(event) {
   ).value;
   const inputtedLocation = document.querySelector("input#new-location").value;
   const inputtedNote = document.querySelector("input#new-note").value;
-  let placeList = document.querySelector("div#places");
+
   let newPlace = new Place(inputtedPlaceName, inputtedLocation, inputtedNote);
+  let placeList = document.querySelector("div#places");
+  
   travelLog.addPlace(newPlace);
-  placeList.append(addPlaceToList((innerText = inputtedPlaceName)));
+  addPlaceToList((placeList.innerText = inputtedPlaceName));
 }
 
 window.addEventListener("load", function () {
@@ -54,8 +56,5 @@ window.addEventListener("load", function () {
 });
 
 function addPlaceToList(newPlace) {
-  
-    // if (newPlace !== null) {
-    (document.querySelector("div#places").innerText = newPlace);
+  document.querySelector("div#places");
 }
-// }

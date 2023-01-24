@@ -23,7 +23,9 @@ _Lesson prompt:_ https://www.learnhowtoprogram.com/intermediate-javascript/objec
 
 ## Known Bugs
 
-- _Cannot log and display multiple places._
+- _Cannot log and display multiple places.*_
+
+_*Use alt branch ui-wip for testing out desired functionality._
 
 ## License
 

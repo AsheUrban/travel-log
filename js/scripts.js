@@ -34,6 +34,8 @@ function Place(placeName, location, note) {
 
 let travelLog = new TravelLog();
 
+// Currently we can only display one place object at a time. WIP displaying list of places. ------
+
 function handleFormSubmission(event) {
   event.preventDefault();
   const inputtedPlaceName = document.querySelector(
